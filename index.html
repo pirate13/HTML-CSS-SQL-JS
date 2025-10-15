@@ -9,11 +9,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/sql-wasm.js"></script>
 </head>
 <body>
+
+  <!-- floating background shapes (overlay, not blocking clicks) -->
+  <div class="floating-shapes">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <!-- ALL PAGE CONTENT -->
+  <div id="app">
     <!-- HEADER SECTION -->
     <header>
-        <h1>Interactive Web Development & SQL Tutorial</h1>
-        <p class="subtitle">Learn HTML, CSS, and SQL with hands-on examples that run in your browser</p>
-        
+        <h1>blablabla Interactive Web Development & SQL Tutorial</h1>
+        <p class="subtitle">blablabla Learn HTML, CSS, and SQL with hands-on examples that run in your browser</p>
+
         <div class="learning-paths" style="margin: 20px 0; padding: 15px; background: #f0f4ff; border-radius: 8px;">
             <h3 style="margin-top: 0; color: #667eea;">Choose Your Learning Path:</h3>
             <p style="margin: 10px 0;"><strong>Structured Approach:</strong> Follow the sections in order, complete each exercise before moving on</p>
@@ -21,7 +30,7 @@
             <p style="margin: 10px 0;"><strong>Project-Based:</strong> Start with the SQL section, build something, then learn the theory behind it</p>
             <p style="margin: 5px 0; font-style: italic; color: #666;">There's no single "right" way to learn. Choose what works best for you.</p>
         </div>
-        
+
         <nav>
             <a href="#html-section">HTML Basics</a>
             <a href="#css-section">CSS Styling</a>
@@ -35,7 +44,7 @@
         ============================================= -->
         <section id="html-section" class="tutorial-section">
             <h2>Part 1: HTML Basics</h2>
-            
+
             <div class="exploration-prompt" style="background: #fff3e0; padding: 15px; margin: 20px 0; border-left: 4px solid #ff9800; border-radius: 5px;">
                 <h4 style="margin-top: 0; color: #e65100;">How to Approach This Section:</h4>
                 <ul style="margin-bottom: 0;">
@@ -45,11 +54,11 @@
                     <li><strong>Ask Questions:</strong> What would happen if you changed X to Y? Test your hypotheses</li>
                 </ul>
             </div>
-            
+
             <div class="lesson">
                 <h3>What is HTML?</h3>
                 <p><strong>HTML (HyperText Markup Language)</strong> is the standard language for creating web pages. It uses <strong>tags</strong> to structure content.</p>
-                
+
                 <div class="example-box">
                     <h4>HTML Structure Example:</h4>
                     <pre><code>&lt;!DOCTYPE html&gt;
@@ -80,18 +89,18 @@
             <div class="lesson">
                 <h3>HTML Forms</h3>
                 <p>Forms collect user input. Try this example form:</p>
-                
+
                 <div class="interactive-demo">
                     <form id="sample-form" onsubmit="event.preventDefault(); alert('Form submitted!');">
                         <label for="name">Name:</label>
                         <input type="text" id="name" name="name" required>
-                        
+
                         <label for="email">Email:</label>
                         <input type="email" id="email" name="email" required>
-                        
+
                         <label for="age">Age:</label>
                         <input type="number" id="age" name="age" min="1" max="120">
-                        
+
                         <button type="submit">Submit</button>
                     </form>
                 </div>
@@ -116,7 +125,7 @@
         ============================================= -->
         <section id="css-section" class="tutorial-section">
             <h2>Part 2: CSS Styling</h2>
-            
+
             <div class="exploration-prompt" style="background: #e3f2fd; padding: 15px; margin: 20px 0; border-left: 4px solid #2196f3; border-radius: 5px;">
                 <h4 style="margin-top: 0; color: #1565c0;">Ways to Learn CSS:</h4>
                 <ul style="margin-bottom: 0;">
@@ -126,11 +135,11 @@
                     <li><strong>Creative:</strong> Skip to the box model, then design your own styled components</li>
                 </ul>
             </div>
-            
+
             <div class="lesson">
                 <h3>What is CSS?</h3>
                 <p><strong>CSS (Cascading Style Sheets)</strong> controls how HTML elements look on the page - colors, fonts, layouts, and more.</p>
-                
+
                 <h4>Three Ways to Add CSS:</h4>
                 <ol>
                     <li><strong>Inline:</strong> <code>&lt;p style="color: blue;"&gt;Text&lt;/p&gt;</code></li>
@@ -181,7 +190,7 @@ p {
                     <div class="box-layer margin-layer">
                         <span>Margin</span>
                         <div class="box-layer border-layer">
-                            <span>Border</span>
+                             <span>Border</span>
                             <div class="box-layer padding-layer">
                                 <span>Padding</span>
                                 <div class="box-layer content-layer">
@@ -199,7 +208,7 @@ p {
         ============================================= -->
         <section id="sql-section" class="tutorial-section">
             <h2>Part 3: SQL Database Queries</h2>
-            
+
             <div class="exploration-prompt" style="background: #e8f5e9; padding: 15px; margin: 20px 0; border-left: 4px solid #4caf50; border-radius: 5px;">
                 <h4 style="margin-top: 0; color: #2e7d32;">Three Ways to Learn SQL:</h4>
                 <ul style="margin-bottom: 0;">
@@ -212,11 +221,11 @@ p {
                     You cannot break anything permanently. Mistakes are learning opportunities!
                 </p>
             </div>
-            
+
             <div class="lesson">
                 <h3>What is SQL?</h3>
                 <p><strong>SQL (Structured Query Language)</strong> is used to manage and query databases. It lets you store, retrieve, update, and delete data.</p>
-                
+
                 <h4>Our Sample Database: Students & Courses</h4>
                 <p>We've created two tables for you to practice with:</p>
                 <ul>
@@ -231,7 +240,7 @@ p {
 
             <div class="lesson">
                 <h3>Basic SQL Commands</h3>
-                
+
                 <div class="sql-command-list">
                     <div class="command-card">
                         <h4>SELECT - Retrieve Data</h4>
@@ -288,7 +297,7 @@ WHERE name = 'John';</code></pre>
                 <div class="sql-editor">
                     <label for="sql-query">Write your SQL query:</label>
                     <textarea id="sql-query" rows="6" placeholder="SELECT * FROM students;">SELECT * FROM students;</textarea>
-                    
+
                     <div class="editor-buttons">
                         <button onclick="executeQuery()" class="run-button">▶ Run Query</button>
                         <button onclick="clearQuery()" class="clear-button">Clear</button>
@@ -366,7 +375,7 @@ WHERE name = 'John';</code></pre>
         ============================================= -->
         <section class="tutorial-section">
             <h2>Putting It All Together</h2>
-            
+
             <div class="exploration-prompt" style="background: #f3e5f5; padding: 15px; margin: 20px 0; border-left: 4px solid #9c27b0; border-radius: 5px;">
                 <h4 style="margin-top: 0; color: #6a1b9a;">Reflection Questions:</h4>
                 <ul style="margin-bottom: 0;">
@@ -376,7 +385,7 @@ WHERE name = 'John';</code></pre>
                     <li>Can you think of a website you use daily? What data might it store in a database?</li>
                 </ul>
             </div>
-            
+
             <div class="lesson">
                 <h3>How These Technologies Work Together</h3>
                 <div class="tech-stack-diagram">
@@ -425,7 +434,10 @@ WHERE name = 'John';</code></pre>
         <p><a href="teacher.html">Teacher Version (Solutions)</a></p>
     </footer>
 
-    <!-- JavaScript for SQL functionality -->
-    <script src="tutorial.js"></script>
+  </div><!-- /#app -->
+
+  <!-- JavaScript for SQL functionality -->
+  <script src="tutorial.js"></script>
+
 </body>
 </html>
